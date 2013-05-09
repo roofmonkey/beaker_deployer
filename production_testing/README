@@ -1,9 +1,0 @@
-Two shell scripts:
-
-1) Edit the variables at the top.
-
-2) Run the ifconfig.sh script - it will parse ips out of ifconfig and setup 
-ssh into the corresponding machines from the machine you are starting from.
-
-For example, run this from your namenode hadoop server, and make the variable names
-all equal to the url for the data nodes, so that namenode can ssh into datanodes and start daemons, etc..
