@@ -1,0 +1,38 @@
+<job retention_tag="120days">
+	<whiteboard>
+		Provision RHEL6.2-20110907.1 Server x86_64
+	</whiteboard>
+	<recipeSet priority="High">
+		<recipe kernel_options="ksdevice=bootif" kernel_options_post="" ks_meta="password='$1$wx2Tu/jU$0zMqj7E3fndYdympz0rKh/'" role="RECIPE_MEMBERS" whiteboard="">
+			<autopick random="false"/>
+			<watchdog panic="ignore"/>
+			<packages/>
+			<ks_appends/>
+			<repos/>
+			<distroRequires>
+				<and>
+					<distro_family op="=" value="RedHatEnterpriseLinux6"/>
+					<distro_variant op="=" value="Server"/>
+					<distro_name op="=" value="RHEL6.2-20110907.1"/>
+					<distro_arch op="=" value="x86_64"/>
+				</and>
+			</distroRequires>
+			<hostRequires>
+				<and>
+                                        <!-- this is replaced - i.e. mrg13.lab.bos.redhat.com -->
+					<hostname op="=" value="INPUT_MACHINE_NAME"/>
+					<system_type op="=" value="Machine"/>
+				</and>
+			</hostRequires>
+			<partitions/>
+			<task name="/distribution/install" role="STANDALONE">
+				<params/>
+			</task>
+			<task name="/distribution/reservesys" role="STANDALONE">
+				<params>
+					<param name="RESERVETIME" value="604800"/>
+				</params>
+			</task>
+		</recipe>
+	</recipeSet>
+</job>

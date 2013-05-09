@@ -1,0 +1,9 @@
+8 /tmp/tmp.jI1BJd3D6o/free
+mrg-weblogic-server.lab.bos.redhat.com DISKSPACE=238475 NUMDISK=1 MEMORY=<no ns> CPUMODEL=Intel(R) Core(TM) i3-2120 CPU @ 3.30GHz ns= 9 x86grep=2
+mrg10.lab.bos.redhat.com DISKSPACE=462307 NUMDISK=2 MEMORY=16384 CPUMODEL=Quad-Core AMD Opteron(tm) Processor 2358 SE ns= 15 x86grep=2
+mrg13.lab.bos.redhat.com DISKSPACE=152625 NUMDISK=1 MEMORY=16384 CPUMODEL=Dual-Core AMD Opteron(tm) Processor 2218 ns= 1 x86grep=2
+mrg15.lab.bos.redhat.com DISKSPACE=152625 NUMDISK=1 MEMORY=16384 CPUMODEL=Dual-Core AMD Opteron(tm) Processor 2218 ns= 18 x86grep=2
+mrg16.lab.bos.redhat.com DISKSPACE=152625 NUMDISK=1 MEMORY=16384 CPUMODEL=Dual-Core AMD Opteron(tm) Processor 2218 ns= 3 x86grep=2
+mrg19.lab.bos.redhat.com DISKSPACE=152638 NUMDISK=2 MEMORY=<no ns> CPUMODEL=Intel(R) Xeon(R) CPU            5110  @ 1.60GHz ns= 6 x86grep=2
+mrg22.lab.bos.redhat.com DISKSPACE=152484 NUMDISK=1 MEMORY=16384 CPUMODEL=Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz ns= 6 x86grep=2
+mrg27.lab.bos.redhat.com DISKSPACE=152484 NUMDISK=1 MEMORY=16384 CPUMODEL=Intel(R) Xeon(R) CPU           E5420  @ 2.50GHz ns= 19 x86grep=2

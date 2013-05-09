@@ -1,0 +1,5 @@
+Beaker scripts and tricks - using the bkr command line api. 
+
+- Get machine meta data for mrg instances (can be customized to any group)
+
+- TODO commision 4 nodes from mrg, run ssh into them, and set add the usr/bin/extend
