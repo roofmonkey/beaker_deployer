@@ -1,5 +1,19 @@
 Beaker scripts and tricks - using the bkr command line api. 
 
+How to use these utils: 
+
+0) remove machines.txt and all mrg*xml files 
+
+1) Run the "scan" script, which creates machines.txt
+
+2) Edit machines.txt (remove machines you dont want) 
+
+3) Run the "commision.." script, which creates xml files for each job
+
+4) run "bkr job-sumbit a.xml b.xml ..." for each xml file in your local directory. 
+
 - Get machine meta data for mrg instances (can be customized to any group)
 
 - TODO commision 4 nodes from mrg, run ssh into them, and set add the usr/bin/extend
+
+
