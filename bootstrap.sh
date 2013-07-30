@@ -4,8 +4,11 @@ git clone git@github.com:roofmonkey/beaker_deployer.git
 cd beaker_deployer/
 #Edit this with the correct server list.
 cat >servers << EOF
-mrg19
-mrg22
+mrg40
 mrg41
+mrg43
 mrg44
 EOF
+cd self_contained_install/deploy
+
+
