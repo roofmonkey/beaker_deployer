@@ -1,6 +1,6 @@
 cd /root/
 
-git clone git@github.com:roofmonkey/SystemTests.git
+git clone --recursive git@github.com:roofmonkey/SystemTests.git
 git clone git@github.com:roofmonkey/self_contained_install.git
 git clone git@github.com:roofmonkey/beaker_deployer.git
 
