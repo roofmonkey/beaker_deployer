@@ -1,8 +1,13 @@
 #Run this script (edit the nodes first) to setup passwordless ssh between nodes.
 #Commented out the Node[***] declarations for safety. 
 
-echo "Enter servers.sh file path"
-read servers
+servers=$1
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied., enter servers path"
+    read servers
+fi
+
 
 master=$(head -1 $servers | tail -1)
 Node[0]=$(head -2 $servers | tail -1)
@@ -16,10 +21,10 @@ read
 #echo "making new local rsa key... okay?"
 
 #read
-#ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 
 #setup passwordless ssh into self
-#cat ~/.ssh/id_rsa.pub | ssh root@$master 'cat >> /root/.ssh/authorized_keys'
+cat ~/.ssh/id_rsa.pub | ssh root@$master 'cat >> /root/.ssh/authorized_keys'
 
 
 for i in "${Node[@]}"
