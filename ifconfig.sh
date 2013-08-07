@@ -14,7 +14,6 @@ Node[0]=$(head -2 $servers | tail -1)
 Node[1]=$(head -3 $servers | tail -1)
 Node[2]=$(head -4 $servers | tail -1)
 echo "master $master and ${Node[0]} ${Node[1]} ${Node[3]}"
-read
 
 #Un comment this section if its a new master.
 #Make an RSA key for this master node.  Assumes one doesnt exist yet.
@@ -39,7 +38,6 @@ do
 	command="ssh root@$i 'cat /root/.ssh/authorized_keys | grep "$master" | wc -l'"
 	authkeys=$($command) 
 	echo "(okay if empty) authkeys = $authkeys"
-	read
 	#contains key to this machine	
 	if [ $pwdless == 0 ] && [ $authkeys -ge 1 ]; then
 		echo "Skipping this machine $i, we already can connect to it $pwdless $authkeys"
@@ -47,7 +45,6 @@ do
 	fi
 
 	echo "$i ? $pwdless and $authkeys ?"
-	read
 	#uncomment below to generate ssh keys
         #now, ssh into the machine and make an id_rsa key...
         echo "Now generating a key on remote machine ..." 
@@ -60,7 +57,6 @@ do
 	cat ~/.ssh/id_rsa.pub | ssh root@$i 'cat >> /root/.ssh/authorized_keys'
 	sleep 1
 	echo "authorized keys... after..... "
-	read
 	ssh root@$i 'cat /root/.ssh/authorized_keys'
 	
 	echo "Done copying id_rsa.pub into $i's authorized keys, now you can ssh into $i"	
