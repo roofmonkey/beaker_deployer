@@ -40,3 +40,8 @@ read x
 
 #Setup passwordless ssh 
 /root/beaker_deployer/ifconfig.sh servers
+
+#Extend the life of all nodes, permanantly
+echo "finally, adding extender to /etc/cron/daily for all nodes - so that these are perm machines"
+chmod 777 extend.sh
+cp extend.sh /etc/cron.daily/
