@@ -1,0 +1,5 @@
+This is a 2 node cluster for playing with hadoop on gluster. 
+Specifically it was designed to test running hadoop daemons under different 
+users as is done in a normal hadoop cluster (as opposed to running as root). 
+
+
