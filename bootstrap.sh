@@ -9,11 +9,15 @@ echo "About to setup servers file : are the servers in this script up to date ? 
 
 #Edit this with the correct server list.
 cat >servers << EOF
-mrg40
-mrg42
-mrg19
-mrg44
+mrg5
+mrg6
 EOF
+
+
+#cat >servers << EOF
+#mrg11
+#mrg12
+#EOF
 
 ###### Validate that servers are reachable before proceeding ##### 
 slaves=( `cat "servers" `)
@@ -44,4 +48,4 @@ read x
 #Extend the life of all nodes, permanantly
 echo "finally, adding extender to /etc/cron/daily for all nodes - so that these are perm machines"
 chmod 777 extend.sh
-cp extend.sh /etc/cron.daily/
+cp beaker_deployer/extend.sh /etc/cron.daily/
